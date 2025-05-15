@@ -1,0 +1,1193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Enter your description here" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/fontawesome.min.css"
+        integrity="sha512-giQeaPns4lQTBMRpOOHsYnGw1tGVzbAIHUyHRgn7+6FmiEgGGjaG0T2LZJmAPMzRCl+Cug0ItQ2xDZpTmEc+CQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js"
+        integrity="sha512-rpLlll167T5LJHwp0waJCh3ZRf7pO6IT1+LZOhAyP6phAirwchClbTZV3iqL3BMrVxIYRbzGTpli4rfxsCK6Vw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
+    <title>Ishwar tour and travels </title>
+    <style>
+        body {
+            font-family: 'Titillium Web', sans-serif;
+        }
+
+        .dropdown-menu li {
+            position: relative;
+        }
+
+        .dropdown-menu .dropdown-submenu {
+            display: none;
+            position: absolute;
+            left: 100%;
+            top: -7px;
+        }
+
+        .dropdown-menu .dropdown-submenu-left {
+            right: 100%;
+            left: auto;
+        }
+
+        .dropdown-menu>li:hover>.dropdown-submenu {
+            display: block;
+        }
+
+        .dropdown-hover:hover>.dropdown-menu {
+            display: inline-block;
+        }
+
+        .dropdown-hover>.dropdown-toggle:active {
+            /*Without this, clicking will make it sticky*/
+            pointer-events: none;
+        }
+
+        .jumbotronImage {
+            background: url("Carousel Cars/frankie-lopez-M8tSzrnStpY-unsplash.jpg") no-repeat right top;
+            background-size: cover;
+            /* height: 100px;
+            width: 200px; */
+            /* background-color: yellow; */
+            /* background: linear-gradient(to bottom right, #009ffd, #2a2a72); */
+        }
+    </style>
+    <style>
+        .container .card_fun {
+            position: relative;
+            width: 259px;
+            background: linear-gradient(0deg, #1b1b1b, #222, #1b1b1b);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 300px;
+            border-radius: 4px;
+            text-align: center;
+            overflow: hidden;
+            transition: 0.5s;
+        }
+
+        .container .card_fun:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, .5);
+        }
+
+        .container .card_fun:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -50%;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, .03);
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .percent {
+            position: relative;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            box-shadow: inset 0 0 50px #000;
+            background: #222;
+            z-index: 1000;
+        }
+
+        .percent .number {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+        }
+
+        .percent .number h2 {
+            color: #777;
+            font-weight: 700;
+            font-size: 40px;
+            transition: 0.5s;
+        }
+
+        .card_fun:hover .percent .number h2 {
+            color: #fff;
+            font-size: 60px;
+        }
+
+        .percent .number h2 span {
+            font-size: 24px;
+            color: #777;
+            transition: 0.5s;
+        }
+
+        .card_fun:hover .percent .number h2 span {
+            color: #fff;
+        }
+
+        .text {
+            position: relative;
+            color: #777;
+            margin-top: 20px;
+            font-weight: 700;
+            font-size: 18px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: 0.5s;
+        }
+
+        .card_fun:hover .text {
+            color: #fff;
+        }
+
+        svg {
+            position: relative;
+            width: 150px;
+            height: 150px;
+            z-index: 1000;
+        }
+
+        svg circle {
+            width: 100%;
+            height: 100%;
+            fill: none;
+            stroke: #191919;
+            stroke-width: 10;
+            stroke-linecap: round;
+            transform: translate(5px, 5px);
+        }
+
+        svg circle:nth-child(2) {
+            stroke-dasharray: 440;
+            stroke-dashoffset: 440;
+        }
+
+        .card_fun:nth-child(1) svg circle:nth-child(2) {
+            stroke-dashoffset: calc(440 - (440 * 90) / 100);
+            stroke: #00ff43;
+        }
+
+        .card_fun:nth-child(2) svg circle:nth-child(2) {
+            stroke-dashoffset: calc(440 - (440 * 70) / 100);
+            stroke: #00a1ff;
+        }
+
+        .card_fun:nth-child(3) svg circle:nth-child(2) {
+            stroke-dashoffset: calc(440 - (440 * 85) / 100);
+            stroke: #ff04f7;
+        }
+
+        .card_fun:nth-child(4) svg circle:nth-child(2) {
+            stroke-dashoffset: calc(440 - (440 * 60) / 100);
+            stroke: #00a1ff;
+        }
+
+        .card_fun:nth-child(5) svg circle:nth-child(2) {
+            stroke-dashoffset: calc(440 - (440 * 40) / 100);
+            stroke: #00ff43;
+        }
+    </style>
+    <style>
+        .hovEffect:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, .5);
+            transition: .5s;
+            /* font-size: 20px; */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- start navbar here -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-primary"
+        style="background: linear-gradient(to bottom right, #009ffd, #2a2a72);">
+        <div class="container">
+            <a class="navbar-brand" href="#">Ishwar Tour and Travels</a>
+            <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse"
+                data-target="#collapsibleNavId">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse " id="collapsibleNavId">
+                <ul class="navbar-nav ml-auto mt-2 mt-lg-0 ">
+                    <li class="nav-item active ">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <div class="dropdown m">
+                        <a class="nav-link dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown">
+                            Vehicles
+                        </a>
+                        <ul class="dropdown-menu">
+
+                            <li>
+                                <a class="dropdown-item" href="#">Bikes &raquo;</a>
+                                <ul class="dropdown-menu dropdown-submenu">
+                                    <li>
+                                        <a class="dropdown-item" href="#">Royal Enfield &raquo;</a>
+                                        <ul class="dropdown-menu dropdown-submenu">
+                                            <li>
+                                                <a class="dropdown-item" href="#">Classic</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Hunter</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Bullet</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Himalayan</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Search More</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">Hero &raquo;</a>
+                                        <ul class="dropdown-menu dropdown-submenu">
+                                            <li>
+                                                <a class="dropdown-item" href="#">Passion Pro</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Splendor</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Maestro Edge</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Destini</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Search More</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">Bajaj &raquo; </a>
+                                        <ul class="dropdown-menu dropdown-submenu">
+                                            <li>
+                                                <a class="dropdown-item" href="#">Avenger</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Pulsar</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Discover</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Platina</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Search More</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">Yamaha &raquo;</a>
+                                        <ul class="dropdown-menu dropdown-submenu">
+                                            <li>
+                                                <a class="dropdown-item" href="#">R15</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Fazer</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Fascino</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Aerox</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Search More</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">KTM &raquo;</a>
+                                        <ul class="dropdown-menu dropdown-submenu">
+                                            <li>
+                                                <a class="dropdown-item" href="#">Duke</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Adventure</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Super Duke</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">RC 490</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Search More</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    Cars &raquo;
+                                </a>
+                                <ul class="dropdown-menu dropdown-submenu">
+                                    <li>
+                                        <a class="dropdown-item" href="#">Mahindra &raquo;</a>
+                                        <ul class="dropdown-menu dropdown-submenu">
+                                            <li>
+                                                <a class="dropdown-item" href="#">Scorpia</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Bolero</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Thar</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">XUV 700</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Search More</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">Maruti Suzuki &raquo;</a>
+                                        <ul class="dropdown-menu dropdown-submenu">
+                                            <li>
+                                                <a class="dropdown-item" href="#">Baleno</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Swift Dezire</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Brezza</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Ertiga</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Search More</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">Honda &raquo; </a>
+                                        <ul class="dropdown-menu dropdown-submenu">
+                                            <li>
+                                                <a class="dropdown-item" href="#">Amaze</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">City</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Jazz</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">WR-V</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Search More</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">Hyundai &raquo;</a>
+                                        <ul class="dropdown-menu dropdown-submenu">
+                                            <li>
+                                                <a class="dropdown-item" href="#">Creta</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Venue</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">i20</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Grand i10</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Search More</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">Ford &raquo;</a>
+                                        <ul class="dropdown-menu dropdown-submenu">
+                                            <li>
+                                                <a class="dropdown-item" href="#">Fusion</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Aspire</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Figo</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Endeavour</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Search More</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item" href="#">Trucks &raquo;</a>
+                                <ul class="dropdown-menu dropdown-submenu">
+                                    <li>
+                                        <a class="dropdown-item" href="#">Mahindra &raquo;</a>
+                                        <ul class="dropdown-menu dropdown-submenu">
+                                            <li>
+                                                <a class="dropdown-item" href="#">Furio</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Blazo</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Jayo</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Loadking Optimo</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Search More</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">Force Motors &raquo;</a>
+                                        <ul class="dropdown-menu dropdown-submenu">
+                                            <li>
+                                                <a class="dropdown-item" href="#">Loader</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Ambulance</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Traveller</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Shaktimaan</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Search More</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">Tata Motors &raquo; </a>
+                                        <ul class="dropdown-menu dropdown-submenu">
+                                            <li>
+                                                <a class="dropdown-item" href="#">ICV</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Cargo</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Light Truck
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Ultra</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Search More</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">Bharat Benz &raquo;</a>
+                                        <ul class="dropdown-menu dropdown-submenu">
+                                            <li>
+                                                <a class="dropdown-item" href="#">1617R</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">3123R</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">1415R</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">4023TT</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Search More</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">Volvo &raquo;</a>
+                                        <ul class="dropdown-menu dropdown-submenu">
+                                            <li>
+                                                <a class="dropdown-item" href="#">FH</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">FH 16</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">VNR</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">VAH</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Search More</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="aboutPage.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- start jumbotron here -->
+    <div class="jumbotron jumbotron-fluid text-light mb-0 jumbotronImage">
+        <div class="container">
+            <div class="ml-4 mr-5">
+                <div class="display-4">Heading</div>
+                <p class="lead">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. At sapiente animi ipsum necessitatibus et.
+                    Quasi deserunt consectetur, aspernatur, officiis magnam cumque eligendi reprehenderit asperiores
+                    voluptas omnis vel modi earum fugit.
+                </p>
+                <hr mr-4>
+                <p class="lead">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea, voluptates?</p>
+                <button class="btn btn-primary" data-toggle="modal" data-target="#modalBtn"
+                    style="background: linear-gradient(to bottom right, #009ffd, #2a2a72);">Sign In</button>
+            </div>
+            <div class="modal text-dark fade" data-backdrop="static" id="modalBtn" tabindex="-1">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header bg-info">
+                            <h3 class="display-4">Sign In Form </h3>
+                            <div class="modal-title">
+                                <button class="close" data-dismiss="modal">
+                                    <span style="font-size: 50px;">&times;</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <input type="email" name="" id="" class="form-control" placeholder="Enter Your Email:-">
+                                <br>
+                                <input type="password" name="" id="" class="form-control" placeholder="Enter Your Password:-">
+                                <!-- <div class="form-text">Password must be 8 characters.</div> -->
+                            </div>
+                            <div class="btn btn-primary" id="signinBtn">Sign In</div>
+                        </div>
+                        <div class="modal-footer bg-info">
+                            <button class="close" data-dismiss="modal">
+                                Close
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="toast position-absolute bg-success" id="signinToast" data-delay="2000" style="top:100px;right:60px;">
+        <div class="toast-header bg-success text-light">
+            <b class="mr-auto">Sign In Form</b>
+            <small class="text-light">1 sec Ago</small>
+            <button class="close ml-4" data-dismiss="toast">
+                <span>&times;</span>
+            </button>
+        </div>
+        <div class="toast-body text-light">
+            Welcome Back Buddy....
+            You are now sign in.
+        </div>
+    </div>
+    <div class="toast position-absolute bg-success" id="welcomeToast" data-delay="2000" style="top:260px;right:60px;">
+        <div class="toast-header bg-success text-light">
+            <b class="mr-5">Greeting to User</b>
+            <small class="text-light">1 sec Ago</small>
+            <button class="close ml-4" data-dismiss="toast">
+                <span>&times;</span>
+            </button>
+        </div>
+        <div class="toast-body text-light">
+            Welcome to our site again.
+        </div>
+    </div>
+    <!-- jumbotron main kuch smjhna hai -->
+    <div class="container-fluid">
+        <div class="row text-white display-4 mt-0 text-center"
+            style="background: linear-gradient(to bottom right, #009ffd, #2a2a72);">
+            <div class="col">
+                <div>Intro</div>
+            </div>
+        </div>
+    </div>
+    <div class="container ">
+        <div class="row my-5 align-items-center">
+            <div class="col-md-5 mx-4 my-md-0 mb-3">
+                <img src="Carousel Cars\samuele-errico-piccarini-FMbWFDiVRPs-unsplash.jpg"
+                    class="img-fluid rounded-circle shadow-lg" alt="">
+            </div>
+            <div class="col-md-6 rounded border border-primary shadow-lg p-4">
+                <h1 class="display-4">Why Choosing Us?</h1>
+                <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita doloremque repellat,
+                    doloribus
+                    neque facere culpa adipisci sed inventore magnam modi excepturi, eius nemo temporibus corrupti
+                    explicabo! Quam incidunt neque dolor quod facilis consequatur reiciendis nihil velit, laudantium
+                    tenetur dolores iure eum</p>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row text-white bg-primary display-4 mt-0 text-center"
+            style="background: linear-gradient(to bottom right, #009ffd, #2a2a72);">
+            <div class="col">
+                <div>Our Services</div>
+            </div>
+        </div>
+    </div>
+    <div class="container my-4">
+        <div class="row">
+            <div class="col-md-4 card-group">
+                <div class="hovEffect card rounded">
+                    <div class="card-img-top">
+                        <img src="Carousel Cars\marcin-czerniawski-7dKggd24hxU-unsplash.jpg" class="img-fluid" alt="">
+                    </div>
+                    <div class="card-body">
+                        <div class="card-title">
+                            <h1 class="text-center">Time</h1>
+                        </div>
+                        <div class="card-text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti sunt ex officia
+                            molestias,
+                            quidem repudiandae? Ad neque, laudantium dicta veritatis ut dolores. Velit nesciunt
+                            eveniet
+                        </div>
+                        <button class="btn btn-primary mt-2"
+                            style="background: linear-gradient(to bottom right, #009ffd, #2a2a72);">Read More</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="hovEffect rounded card">
+                    <div class="card-img-top">
+                        <img src="Carousel Cars\samuele-errico-piccarini-FMbWFDiVRPs-unsplash.jpg" class="img-fluid"
+                            alt="">
+                    </div>
+                    <div class="card-body">
+                        <div class="card-title">
+                            <h1 class="text-center">Best Product</h1>
+                        </div>
+                        <div class="card-text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti sunt ex officia
+                            molestias,
+                            quidem repudiandae? Ad neque, laudantium dicta veritatis ut dolores. Velit nesciunt
+                            eveniet
+                        </div>
+                        <button class="btn btn-primary mt-2"
+                            style="background: linear-gradient(to bottom right, #009ffd, #2a2a72);">Read More</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="hovEffect rounded card">
+                    <div class="card-img-top">
+                        <img src="Carousel Cars\tech-nick-kPUQOsfThag-unsplash.jpg" class="img-fluid" alt="">
+                    </div>
+                    <div class="card-body">
+                        <div class="card-title">
+                            <h1 class="text-center">Availabiltiy</h1>
+                        </div>
+                        <div class="card-text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti sunt ex officia
+                            molestias,
+                            quidem repudiandae? Ad neque, laudantium dicta veritatis ut dolores. Velit nesciunt
+                            eveniet
+                        </div>
+                        <button class="btn btn-primary mt-2"
+                            style="background: linear-gradient(to bottom right, #009ffd, #2a2a72);">Read More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row text-white bg-primary display-4 mt-0 text-center"
+            style="background: linear-gradient(to bottom right, #009ffd, #2a2a72);">
+            <div class="col">
+                <div>Cars Trend</div>
+            </div>
+        </div>
+    </div>
+    <!-- start new progress bar -->
+    <div class="container my-4 d-flex justify-content-between">
+        <div class="card_fun mx-2">
+            <div class="box">
+                <div class="percent">
+                    <svg>
+                        <circle cx="70" cy="70" r="70"></circle>
+                        <circle cx="70" cy="70" r="70"></circle>
+                    </svg>
+                    <div class="number">
+                        <h2>90<span>%</span></h2>
+                    </div>
+                </div>
+                <h2 class="text">Mahindra</h2>
+            </div>
+        </div>
+        <div class="card_fun mx-2">
+            <div class="box">
+                <div class="percent">
+                    <svg>
+                        <circle cx="70" cy="70" r="70"></circle>
+                        <circle cx="70" cy="70" r="70"></circle>
+                    </svg>
+                    <div class="number">
+                        <h2>70<span>%</span></h2>
+                    </div>
+                </div>
+                <h2 class="text">Kia</h2>
+            </div>
+        </div>
+        <div class="card_fun mx-2">
+            <div class="box">
+                <div class="percent">
+                    <svg>
+                        <circle cx="70" cy="70" r="70"></circle>
+                        <circle cx="70" cy="70" r="70"></circle>
+                    </svg>
+                    <div class="number">
+                        <h2>85<span>%</span></h2>
+                    </div>
+                </div>
+                <h2 class="text">Honda</h2>
+            </div>
+        </div>
+        <div class="card_fun mx-2">
+            <div class="box">
+                <div class="percent">
+                    <svg>
+                        <circle cx="70" cy="70" r="70"></circle>
+                        <circle cx="70" cy="70" r="70"></circle>
+                    </svg>
+                    <div class="number">
+                        <h2>60<span>%</span></h2>
+                    </div>
+                </div>
+                <h2 class="text">MG</h2>
+            </div>
+        </div>
+        <div class="card_fun ml-2">
+            <div class="box">
+                <div class="percent">
+                    <svg>
+                        <circle cx="70" cy="70" r="70"></circle>
+                        <circle cx="70" cy="70" r="70"></circle>
+                    </svg>
+                    <div class="number">
+                        <h2>40<span>%</span></h2>
+                    </div>
+                </div>
+                <h2 class="text">Hyundai</h2>
+            </div>
+        </div>
+    </div>
+    <!-- finish new progress bar -->
+    <div class="container-fluid">
+        <div class="row text-white bg-primary display-4 mt-0 text-center"
+            style="background: linear-gradient(to bottom right, #009ffd, #2a2a72);">
+            <div class="col">
+                <div>Our Cars</div>
+            </div>
+        </div>
+    </div>
+    <div class="container my-5">
+        <div class="carousel slide carousel-fade" id="myCarousel" data-ride="carousel">
+            <ol class="carousel-indicators m-0">
+                <li data-target="#myCarousel" data-slide-to="0" class="active bg-primary"></li>
+                <li data-target="#myCarousel" data-slide-to="1" class="bg-primary"></li>
+                <li data-target="#myCarousel" data-slide-to="2" class="bg-primary"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-interval="3000">
+                    <div class="row">
+                        <div class="col-md-4 m-md-0 my-3"><img src="Carousel Cars/img_1.jpg" alt=""
+                                class="img-fluid rounded-circle d-block w-100"></div>
+
+                        <div class="col-md-4 m-md-0 my-3"><img src="Carousel Cars/img_1.jpg" alt=""
+                                class="img-fluid rounded-circle d-block w-100"></div>
+                        <div class="col-md-4 m-md-0 my-3"><img src="Carousel Cars/img_1.jpg" alt=""
+                                class="img-fluid rounded-circle d-block w-100"></div>
+                        <div class="text-center display-5 container mt-4 text-dark">
+                            <h5>First Category Cars</h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item" data-interval="3000">
+                    <div class="row">
+                        <div class="col-md-4  m-md-0 my-3"><img src="Carousel Cars/img_6.jpg" alt=""
+                                class="img-fluid rounded-circle d-block w-100"></div>
+
+                        <div class="col-md-4  m-md-0 my-3"><img src="Carousel Cars/img_6.jpg" alt=""
+                                class="img-fluid rounded-circle d-block w-100"></div>
+                        <div class="col-md-4  m-md-0 my-3"><img src="Carousel Cars/img_6.jpg" alt=""
+                                class="img-fluid rounded-circle d-block w-100"></div>
+                        <div class="text-center display-5 container mt-4 text-dark">
+                            <h5>Second Category Cars</h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item" data-interval="3000">
+                    <div class="row">
+                        <div class="col-md-4  m-md-0 my-3"><img src="Carousel Cars/img_9.jpg" alt=""
+                                class="img-fluid rounded-circle d-block w-100"></div>
+
+                        <div class="col-md-4  m-md-0 my-3"><img src="Carousel Cars/img_9.jpg" alt=""
+                                class="img-fluid rounded-circle d-block w-100"></div>
+                        <div class="col-md-4  m-md-0 my-3"><img src="Carousel Cars/img_9.jpg" alt=""
+                                class="img-fluid rounded-circle d-block w-100"></div>
+                        <div class="text-center display-5 container mt-4 text-dark">
+                            <h5>Third Category Cars</h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="#myCarousel" class="carousel-control-prev" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a href="#myCarousel" class="carousel-control-next" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </a>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row text-white bg-primary display-4 mt-0 text-center"
+            style="background: linear-gradient(to bottom right, #009ffd, #2a2a72);">
+            <div class="col">
+                <div>Our Clients</div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row border border-primary rounded shadow my-4">
+            <div class="col">
+                <div class="media my-4 hovEffect mx-2 p-3">
+                    <div class="media-body">
+                        <h2 class="mt-0">Kinshuk</h2>
+
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque adipisci ab dolorum,
+                            distinctio laudantium sint quo saepe aperiam dignissimos perferendis id suscipit repellendus
+                            rem, harum quis voluptatem qui temporibus commodi.</p>
+                    </div>
+                    <img src="icons\1376031_boss_chief_diplomat_head_lawyer_icon.png" class="mr-3 align-self-center"
+                        style="height:100px; width:100px;" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="row border border-primary rounded shadow my-4">
+            <div class="col">
+                <div class="media my-4 hovEffect mx-2 p-3">
+                    <img src="icons/403022_business man_male_user_avatar_profile_icon.png"
+                        class="mr-3 align-self-center" style="height:100px; width:100px;" alt="">
+
+                    <div class="media-body">
+                        <h2 class="mt-0">Sanyog</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque adipisci ab dolorum,
+                            distinctio laudantium sint quo saepe aperiam dignissimos perferendis id suscipit repellendus
+                            rem, harum quis voluptatem qui temporibus commodi.</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="row  border border-primary rounded shadow my-4">
+            <div class="col">
+                <div class="media my-4 hovEffect mx-2 p-3">
+                    <img src="icons/403018_avatar_female_mic_support_user_icon.png" class="mr-3 align-self-md-start align-self-center"
+                        style="height:100px; width:100px;" alt="">
+                    <div class="media-body">
+                        <h2 class="mt-0">Vanshika</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque adipisci ab dolorum,
+                            distinctio laudantium sint quo saepe aperiam dignissimos perferendis id suscipit repellendus
+                            rem, harum quis voluptatem qui temporibus commodi.</p>
+                        <div class="row ">
+                                <div class="col d-md-block d-none">
+                                    <div class="media mt-5">
+                                        <img src="icons/403020_avatar_male_support_user_headset_icon.png"
+                                            class="mr-3 align-self-start" style="height:100px; width:100px;" alt="">
+                                        <div class="media-body">
+                                            <h2 class="mt-0">Nikhil</h2>
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque adipisci
+                                                ab dolorum, distinctio laudantium sint quo saepe aperiam dignissimos
+                                                perferendis id suscipit repellendus rem, harum quis voluptatem qui
+                                                temporibus commodi.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row border border-primary rounded shadow my-4">
+            <div class="col">
+                <div class="media my-4 hovEffect mx-2 p-3">
+                    <div class="media-body">
+                        <h2 class="mt-0">Disha</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque adipisci
+                            ab dolorum,
+                            distinctio laudantium sint quo saepe aperiam dignissimos perferendis id
+                            suscipit repellendus
+                            rem, harum quis voluptatem qui temporibus commodi.</p>
+                    </div>
+                    <img src="icons/403023_avatar_user_woman_female_person_icon.png" class="mr-3 align-self-center"
+                        style="height:100px; width:100px;" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="row border border-primary rounded shadow my-4">
+            <div class="col">
+                <div class="media my-4 hovEffect mx-2 p-3">
+                    <img src="icons/2694134_avatar_boy_man_person_user_icon.png" class="mr-3 align-self-center"
+                        style="height:100px; width:100px;" alt="">
+                    <div class="media-body">
+                        <h2 class="mt-0">Harshit</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque adipisci
+                            ab dolorum,
+                            distinctio laudantium sint quo saepe aperiam dignissimos perferendis id
+                            suscipit repellendus
+                            rem, harum quis voluptatem qui temporibus commodi.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row text-white bg-primary display-4 mt-0 text-center"
+            style="background: linear-gradient(to bottom right, #009ffd, #2a2a72);">
+            <div class="col">
+                <div>Contact Form</div>
+            </div>
+        </div>
+    </div>
+    <div class="container my-4">
+        <div class="row  justify-content-center">
+            <div class="col-md-8  border border-primary rounded shadow">
+                <div class="form-group">
+                    <div class="row form-row pt-3">
+                        <div class="col-md-12 col-form-label">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">
+                                        First Name
+                                    </span>
+                                </div>
+                                <input type="text" class="form-control ">
+
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">
+                                        Last Name
+                                    </span>
+                                </div>
+                                <input type="text" class="form-control ">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                     
+                        <div class="col-md-12 col-form-label">
+                            <input type="password" name="" id="" class="form-control" placeholder="Enter Your Password">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        
+                        <div class="col-md-12 col-form-label">
+                            <input type="password" name="" id="" class="form-control"
+                                placeholder="Fill Your Password again">
+                        </div>
+                    </div>
+                    <div class="row justify-content-end my-1">
+                        <div class="col-md-3 ">
+                            <button type="submit" class="btn btn-primary" id="showBtn"
+                                style="background: linear-gradient(to bottom right, #009ffd, #2a2a72);">
+                                Submit
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <div class="toast position-absolute bg-success" id="signupToast" data-delay="2000" style="top:3600px;right:60px;">
+        <div class="toast-header bg-success text-light">
+            <b class="mr-auto">Sign Up Form</b>
+            <small class="text-light">1 sec Ago</small>
+            <button class="close ml-4" data-dismiss="toast">
+                <span>&times;</span>
+            </button>
+        </div>
+        <div class="toast-body text-light">
+            Congratulations buddy....
+            You are now sign up.
+        </div>
+    </div>
+    <div class="toast position-absolute bg-success" id="greetingToast" data-delay="2000" style="top:3720px;right:60px;">
+        <div class="toast-header bg-success text-light">
+            <b class="mr-5">Greeting to User</b>
+            <small class="text-light">1 sec Ago</small>
+            <button class="close ml-4" data-dismiss="toast">
+                <span>&times;</span>
+            </button>
+        </div>
+        <div class="toast-body text-light">
+            Thanku for visiting.
+        </div>
+    </div>
+    <!-- <div class="container ">
+        <div class="row justify-content-center">
+            <div class="col ">
+                 <div class="btn-toolbar">
+                    <div class="btn-group my-4 mx-3">
+                        <button class=" btn btn-outline-primary active">
+                            1
+                        </button>
+                        <button class=" btn btn-outline-primary ">
+                            2
+                        </button>
+                        </div>
+                        <div class="btn-group my-4 mx-3">
+                        <button class=" btn btn-outline-primary ">
+                            3
+                        </button>
+                        <button class=" btn btn-outline-primary ">
+                            4
+                        </button>
+                        </div>
+                        <div class="btn-group my-4 mx-3">
+                        <button class=" btn btn-outline-primary ">
+                            5
+                        </button>
+                        <button class=" btn btn-outline-primary ">
+                            6
+                        </button>
+                    </div>
+                </div> 
+                <div class="nav mb-4 mt-1 justify-content-center">
+                    <ul class="pagination">
+                        <li class="page-item">
+                            <a href="" class="page-link">
+                                <span class="mx-2">
+                                    <i class="fa-solid fa-arrow-left"></i>
+                                </span>
+                                Previous
+                            </a>
+                        </li>
+                        <li class="page-item active">
+                            <a href="" class="page-link">
+                                <span>
+                                    <i class="fa-solid fa-house">
+                                    </i>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="page-item">
+                            <a href="" class="page-link">
+                                <span>
+                                    <i class="fa-solid fa-taxi"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="page-item">
+                            <a href="" class="page-link">
+                                <span>
+                                    <i class="fa-solid fa-address-card"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="page-item">
+                            <a href="" class="page-link">
+                                <span>
+                                    <i class="fa-solid fa-phone"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="page-item">
+                            <a href="" class="page-link">
+                                Next
+                                <span class="mx-2">
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- <div class="container">
+        <div class="row">
+            <div class="col-md-3 float-right    ">
+                <button class="btn btn-danger mx-5 my-2 " type="button">
+                    <span><i class="fa-solid fa-arrow-up mr-2"></i>Scroll to top</span>
+                </button>
+            </div>
+        </div>
+    </div> -->
+
+    <div class="container-fluid">
+        <div class="row text-white bg-primary lead mt-0 text-center"
+            style="background: linear-gradient(to bottom right, #009ffd, #2a2a72);">
+            <div class="col-md-6">
+                <div>Ishwar Tour And Travels &copy; 2022</div>
+            </div>
+            <div class="col-md-6 mr-auto">
+                <div>Terms and Conditions</div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+    <script>
+        $(function(){
+            $("#signinBtn").click(function(){
+                $('#welcomeToast,#signinToast').toast('show')
+            })
+            $("#showBtn").click(function(){
+                $('#greetingToast,#signupToast').toast('show')
+            })
+        })
+    </script>
+</body>
+
+</html>

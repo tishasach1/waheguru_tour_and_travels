@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Enter your description here" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
+    <title>About Us Page</title>
+</head>
+<style>
+    body {
+        font-family: 'Titillium Web', sans-serif;
+    }
+
+    .dropdown-menu li {
+        position: relative;
+    }
+
+    .dropdown-menu .dropdown-submenu {
+        display: none;
+        position: absolute;
+        left: 100%;
+        top: -7px;
+    }
+
+    .dropdown-menu .dropdown-submenu-left {
+        right: 100%;
+        left: auto;
+    }
+
+    .dropdown-menu>li:hover>.dropdown-submenu {
+        display: block;
+    }
+
+    .dropdown-hover:hover>.dropdown-menu {
+        display: inline-block;
+    }
+
+    .dropdown-hover>.dropdown-toggle:active {
+        /*Without this, clicking will make it sticky*/
+        pointer-events: none;
+    }
+
+    .tab-color-medium,
+    a.active {
+        background: linear-gradient(to bottom right, #2a2a72, #009ffd);
+    }
+/* 
+    .tab-color-medium,
+    a.active-medium {
+        background: linear-gradient(to bottom right, #2a2a72, #009ffd);
+    } */
+</style>
+<style>
+    .hovEffect:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 35px rgba(0, 0, 0, .5);
+        transition: .5s;
+        /* font-size: 20px; */
+    }
+</style>
+<body>
+    <!-- start navbar here -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-primary"
+        style="background: linear-gradient(to bottom right, #009ffd, #2a2a72);">
+        <div class="container">
+            <a class="navbar-brand" href="#">Ishwar Tour and Travels</a>
+            <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse"
+                data-target="#collapsibleNavId">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse " id="collapsibleNavId">
+                <ul class="navbar-nav ml-auto mt-3 mt-lg-0 ">
+                    <li class="nav-item">
+                        <a class="nav-link" href="Index.html">Home</a>
+                    </li>
+                    <div class="dropdown">
+                        <a class="nav-link dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown">
+                            Vehicles
+                        </a>
+                        <ul class="dropdown-menu">
+
+                            <li>
+                                <a class="dropdown-item" href="#">Bikes &raquo;</a>
+                                <ul class="dropdown-menu dropdown-submenu">
+                                    <li>
+                                        <a class="dropdown-item" href="#">Royal Enfield &raquo;</a>
+                                        <ul class="dropdown-menu dropdown-submenu">
+                                            <li>
+                                                <a class="dropdown-item" href="#">Classic</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Hunter</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Bullet</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Himalayan</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Search More</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">Hero &raquo;</a>
+                                        <ul class="dropdown-menu dropdown-submenu">
+                                            <li>
+                                                <a class="dropdown-item" href="#">Passion Pro</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Splendor</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Maestro Edge</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Destini</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Search More</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">Bajaj &raquo; </a>
+                                        <ul class="dropdown-menu dropdown-submenu">
+                                            <li>
+                                                <a class="dropdown-item" href="#">Avenger</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Pulsar</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Discover</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Platina</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Search More</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">Yamaha &raquo;</a>
+                                        <ul class="dropdown-menu dropdown-submenu">
+                                            <li>
+                                                <a class="dropdown-item" href="#">R15</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Fazer</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Fascino</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Aerox</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Search More</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">KTM &raquo;</a>
+                                        <ul class="dropdown-menu dropdown-submenu">
+                                            <li>
+                                                <a class="dropdown-item" href="#">Duke</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Adventure</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Super Duke</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">RC 490</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Search More</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    Cars &raquo;
+                                </a>
+                                <ul class="dropdown-menu dropdown-submenu">
+                                    <li>
+                                        <a class="dropdown-item" href="#">Mahindra &raquo;</a>
+                                        <ul class="dropdown-menu dropdown-submenu">
+                                            <li>
+                                                <a class="dropdown-item" href="#">Scorpia</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Bolero</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Thar</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">XUV 700</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Search More</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">Maruti Suzuki &raquo;</a>
+                                        <ul class="dropdown-menu dropdown-submenu">
+                                            <li>
+                                                <a class="dropdown-item" href="#">Baleno</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Swift Dezire</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Brezza</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Ertiga</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Search More</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">Honda &raquo; </a>
+                                        <ul class="dropdown-menu dropdown-submenu">
+                                            <li>
+                                                <a class="dropdown-item" href="#">Amaze</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">City</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Jazz</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">WR-V</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Search More</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">Hyundai &raquo;</a>
+                                        <ul class="dropdown-menu dropdown-submenu">
+                                            <li>
+                                                <a class="dropdown-item" href="#">Creta</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Venue</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">i20</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Grand i10</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Search More</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">Ford &raquo;</a>
+                                        <ul class="dropdown-menu dropdown-submenu">
+                                            <li>
+                                                <a class="dropdown-item" href="#">Fusion</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Aspire</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Figo</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Endeavour</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Search More</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item" href="#">Trucks &raquo;</a>
+                                <ul class="dropdown-menu dropdown-submenu">
+                                    <li>
+                                        <a class="dropdown-item" href="#">Mahindra &raquo;</a>
+                                        <ul class="dropdown-menu dropdown-submenu">
+                                            <li>
+                                                <a class="dropdown-item" href="#">Furio</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Blazo</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Jayo</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Loadking Optimo</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Search More</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">Force Motors &raquo;</a>
+                                        <ul class="dropdown-menu dropdown-submenu">
+                                            <li>
+                                                <a class="dropdown-item" href="#">Loader</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Ambulance</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Traveller</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Shaktimaan</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Search More</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">Tata Motors &raquo; </a>
+                                        <ul class="dropdown-menu dropdown-submenu">
+                                            <li>
+                                                <a class="dropdown-item" href="#">ICV</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Cargo</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Light Truck
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Ultra</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Search More</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">Bharat Benz &raquo;</a>
+                                        <ul class="dropdown-menu dropdown-submenu">
+                                            <li>
+                                                <a class="dropdown-item" href="#">1617R</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">3123R</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">1415R</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">4023TT</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Search More</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">Volvo &raquo;</a>
+                                        <ul class="dropdown-menu dropdown-submenu">
+                                            <li>
+                                                <a class="dropdown-item" href="#">FH</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">FH 16</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">VNR</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">VAH</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">Search More</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Services</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="aboutPage.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- navbar ends here -->
+    <!-- start tabs from here -->
+   
+    <div class="container">
+        <div class="row my-5 align-items-center justify-content-center">
+            <div class="col-md-3 d-md-block d-none">
+                <ul class="nav nav-pills flex-column">
+                    <li class="nav-item">
+                        <a href="#founder" data-toggle="tab" class="active-medium active show nav-link  ">Founder</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#problem" data-toggle="tab" class="nav-link ">Problem</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#businessModel" data-toggle="tab" class="nav-link ">Business Model Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#team" data-toggle="tab" class="nav-link ">Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#next" data-toggle="tab" class="nav-link ">What's Next</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#journey" data-toggle="tab" class=" nav-link ">Our Journey</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-9 my-md-2 my-2">
+                <div class="tab-content shadow-lg rounded border border-primary">
+                    <div class="m-3 p-2 tab-pane show active-medium active fade hovEffect" id="founder">
+                        <h1 class="mb-3 text-center"><u>Kinshuk Majoka</u></h1>
+                        <h3>
+                            Who Am I ?
+                        </h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat beatae possimus, enim
+                            repudiandae quisquam temporibus et pariatur fuga debitis vel, voluptate neque rerum iure!
+                            Nisi, iure earum porro maxime asperiores assumenda sapiente quas saepe ex exercitationem
+                            atque incidunt, laudantium blanditiis, porro, assumenda quidem ullam recusandae ipsa
+                            voluptates beatae molestias delectus inventore ratione ducimus. Laboriosam ullam aspernatur
+                            repellendus suscipit voluptas delectus nihil placeat dignissimos, autem, id similique, quos
+                            laudantium porro maiores minus!
+                        </p>
+                        <button class="mb-3 tab-color-medium float-right btn btn-primary">Read More</button>
+                    </div>
+                    <div class="tab-pane m-3 p-2 fade hovEffect" id="problem">
+                        <h1 class="mb-3 text-center"><u> Problem Faced</u></h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, saepe laboriosam obcaecati
+                            eos nobis soluta veniam dolorem itaque accusamus maiores voluptates placeat est a,
+                            consequatur architecto in. Iusto facere corporis incidunt at similique illo, nobis dicta,
+                            placeat repellat fuga harum mollitia perspiciatis explicabo earum rerum. Minima adipisci,
+                            dolorum facere a veniam tempore eaque asperiores! Soluta aliquid, aperiam, odio fugit unde
+                            laudantium cumque laboriosam vero iusto explicabo, reiciendis illum veritatis nobis
+                            distinctio commodi tempore consectetur obcaecati quam nostrum quae debitis accusamus. Lorem
+                            ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, illo? Voluptatem sed ipsam
+                            vero debitis dicta distinctio, deserunt culpa cupiditate consequuntur commodi voluptas quae
+                            libero dolorem fugit molestias dolores? Laboriosam!</p>
+                        <button class="btn btn-primary float-right tab-color-medium">Read More</button>
+                    </div>
+                    <div class="tab-pane m-3 p-2 fade hovEffect" id="businessModel">
+                        <h1 class="text-center"><u>Ishwar Tour and Travels</u></h1>
+                        <h5 class="text-muted text-lead text-center mt-0">Why we started ?</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore a quisquam nobis quibusdam
+                            delectus ratione ea dolore autem minus! Explicabo enim, minima deleniti deserunt quasi
+                            corporis pariatur quod provident nihil vero eligendi nesciunt? Animi distinctio alias
+                            inventore eaque cupiditate, nihil quisquam sapiente facilis doloribus modi! Ducimus modi
+                            asperiores optio officia accusantium tempora impedit nam ea veritatis et inventore
+                            doloremque at debitis quidem molestias vero qui reiciendis perferendis quaerat delectus, ab
+                            consequuntur facilis omnis amet. Et molestiae dicta beatae architecto fuga, corrupti quidem
+                            delectus nostrum similique minima recusandae, iure repellendus eos?</p>
+                        <button class="btn btn-primary float-right tab-color-medium">Read More</button>
+                    </div>
+                    <div class="tab-pane m-2 p-2 fade hovEffect" id="team">
+                        <h1 class="text-center"><u>Our Team</u></h1>
+                        <div class="row ">
+                            <div class="col-md-12 p-4">
+                                <div class="card shadow-lg rounded border border-success">
+                                    <div class="row no-gutters">
+                                        <div class=" p-3 col-md-4">
+                                            <img src="icons\403019_avatar_male_man_person_user_icon.png" alt=""
+                                                class="card-img">
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="card-body">
+                                                <div class="card-title">
+                                                    <p class="lead"><b>Satyam Kataria</b><br><span class="text-muted">&nbsp;&nbsp;<small>(Post - 1)</small></span></p>
+                                                </div>
+                                                <div class="card-text">
+                                                    <p>Lorem ipsum dolor. Voluptas corrupti aliquam blanditiis
+                                                        architecto, dolor dolore a vel dignissimos eaque minima
+                                                        excepturi deleniti soluta quae at possimus. Doloribus.</p>
+                                                    <button class="btn btn-primary tab-color-medium">Read about Satyam Kataria</button>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="btn btn-primary float-right tab-color-medium" href="../ishwar Tour and Travels/Our Clients/honourClients(1).html">See Honour Team</a>
+                    </div>
+                    <div class="tab-pane m-3 p-2 fade hovEffect" id="next">
+                        <h1 class="text-center"><u>What's Next</u></h1>
+                        <h5 class="text-muted text-lead mt-0">
+                            <span>&rightarrow;</span>&nbsp;&nbsp;&nbsp;&nbsp;1<sup>st</sup> Step</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci laboriosam deleniti
+                            temporibus assumenda ducimus perspiciatis labore illum, quo ullam maxime voluptates
+                            quibusdam illo cupiditate iusto obcaecati hic quasi ex, veritatis, dicta est sapiente ut
+                            tenetur! Adipisci doloremque nesciunt illo corrupti?</p>
+                        <h5 class="text-muted text-lead mt-0">
+                            <span>&rightarrow;</span>&nbsp;&nbsp;&nbsp;&nbsp;2<sup>nd</sup> Step</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci laboriosam deleniti
+                            temporibus assumenda ducimus perspiciatis laboreis, dicta est sapiente ut
+                            tenetur! Adipisci doloremque nesciunt illo corrupti?</p>
+                        <button class="btn btn-primary float-right tab-color-medium">Read More</button>
+
+                    </div>
+                    <div class="tab-pane m-3 p-2 fade hovEffect" id="journey">
+                        <h1 class="text-center"><u>Our Journey</u></h1>
+                        <h5 class="text-muted text-lead text-center mt-0">How we started ?</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, illo vitae eligendi, vel
+                            dolorum rerum aperiam debitis modi dolore sint, enim commodi quibusdam velit cumque suscipit
+                            nihil explicabo expedita. Explicabo consequatur delectus ipsam, eveniet laboriosam minus
+                            fugiat tempora debitis! Hic, deleniti? Placeat reprehenderit excepturi, repellendus fugiat
+                            sapiente asperiores eligendi ratione pariatur explicabo et. Laborum eius similique
+                            necessitatibus saepe. Accusamus alias deleniti eum, maxime corrupti aut cupiditate. Maiores
+                            tempora veritatis at harum enim, est aperiam, suscipit minus, excepturi cupiditate eveniet
+                            porro sint. Dolorem quisquam eligendi, vitae repudiandae eius neque consequatur similique
+                            assumenda, est molestiae perspiciatis accusamus, deserunt unde! Minima, libero cumque.</p>
+                        <button class="btn btn-primary float-right tab-color-medium">Read More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <!-- ends tabs here -->
+    <!-- start footer here -->
+    <div class="position-fixed fixed-bottom container-fluid">
+        <div class=" row text-white bg-primary lead mt-0 text-center"
+            style="background: linear-gradient(to bottom right, #009ffd, #2a2a72);">
+            <div class="col-md-6">
+                <div>Ishwar Tour And Travels &copy; 2022</div>
+            </div>
+            <div class="col-md-6 mr-auto">
+                <div>Terms and Conditions</div>
+            </div>
+        </div>
+    </div>
+    <!-- footer ends here -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>
